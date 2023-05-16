@@ -5,34 +5,27 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
-export function getClientsWithWrongBalance(array) {
+export function getAllDepositsGreaterThanOneHundred(array) {
   // Your code goes here...
-  let depArray = [];
-  let withArray = [];
-  let badArray = [];
+  const array1 = [];
+  const array2 = [];
+  const array3 = [];
   for (let i = 0; i < array.length; i++) {
-    let money = 0;
-    let sum = 0;
     if (array[i].deposits) {
+    let sum = 0;
       for (let j = 0; j < array[i].deposits.length; j++) {
         sum += array[i].deposits[j];
-        if (array[i].deposits[j] > 0) {
-          depArray.push(array[i].deposits[j]);
+      } 
+        if (array[i].withdrawals) {
+          let money = 0;
+          for (let x = 0; x < array[i].withdrawals.length; x++) {
+            money += array[i].withdrawals[x];
+          } 
+          array2.push(money);
         } 
+        array1.push(sum);
       }
-    } 
-    if (array[i].withdrawals) {
-      for (let x = 0; x < array[i].withdrawals.length; x++) {
-        money += array[i].withdrawals[x];
-        if (array[i].withdrawals[x] > 0) {
-          withArray.push(array[i].withdrawals[x]);
-        }
-      }
-    } 
-    if (depArray !== withArray) {
-      badArray.push(array[i]);
-    }
-  } return badArray;
+    } return array;
 }
 
 
