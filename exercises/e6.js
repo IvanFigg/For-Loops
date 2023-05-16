@@ -15,8 +15,6 @@ export function getClientWithNoMoney(array) {
       array1.push(arrayAccounts[i].name);
     }
   }
-
-
   return array1;
 }
 
