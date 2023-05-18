@@ -7,7 +7,23 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
-
+  const withArray = [];
+  const withoutArray = [];
+  const joinedArray = [];
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      for (let x = 0; x < array[i][j].length; x++) {
+      if (array[i][j] === "a") {
+        withoutArray.push(array[i]);
+        withArray.push(array[i]);
+      } 
+      else if (array[i][j] === 'j') {
+        joinedArray.push(withoutArray)
+        joinedArray.push(withArray);
+      }
+    }
+  }
+} return joinedArray;
 }
 
 

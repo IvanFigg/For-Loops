@@ -5,17 +5,17 @@
 // flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]) => ['d', 'r', 'z', 'b', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
-export function flatArrays(array1, array2) {
-  // Your code goes here...
-  const closeArray1 = [];
-  const closeArray2 = [];
-  for (let i = 0; i < array2.length; i++) {
-    closeArray1.push(array2[i]);
+export function flatArrays(flatArraysData) {
+  const aArray = [];
+  const bArray = [];
+  const cArray = [];
+  for (let i = 0; i < flatArraysData.length; i++) {
+    aArray.push(flatArraysData[i]);
+    for (let x = 0; x < flatArraysData[i].length; x++) {
+      bArray.push(aArray[i][x]);
+    }  
   }
-  for (let i = 0; i < array1.length; i++) {
-    closeArray2.push(array1[i]);
-  }
-  return closeArray1.concat(closeArray2);
+  return bArray;
 }
 
 
