@@ -10,20 +10,24 @@ export function separateNamesWithAFromRest(array) {
   const withArray = [];
   const withoutArray = [];
   const joinedArray = [];
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array[i].length; j++) {
-      for (let x = 0; x < array[i][j].length; x++) {
-      if (array[i][j] === "a") {
-        withoutArray.push(array[i]);
-        withArray.push(array[i]);
-      } 
-      else if (array[i][j] === 'j') {
-        joinedArray.push(withoutArray)
-        joinedArray.push(withArray);
+  let aLetter = 'a';
+
+  for (let person of array) {
+    let decider = false;
+    for (let letter of person) {
+      if (letter === aLetter) {
+        decider = true;
       }
     }
-  }
-} return joinedArray;
+    if (decider) {
+      withArray.push(person);
+    } if (decider === false) {
+      withoutArray.push(person);
+    }
+  } 
+  joinedArray.push(withArray);
+  joinedArray.push(withoutArray);
+  return joinedArray;
 }
 
 
