@@ -7,19 +7,10 @@
 export function getAllClientNames(array) {
   // Your code goes here...
   const array1 = [];
-  const arrayValues = array;
   for (let i = 0; i < array.length; i++) {
-    array1.push(array[i]);
+    array1.push(array[i].name);
   }
-
-  const array2 = [];
-  const arrayName = array2;
-
-  for (let i = 0; i < array1.length; i++) {
-    array2.push(array1[i].name);
-  }
-  return array1 && arrayName;
-
+  return array1;
 }
 
 

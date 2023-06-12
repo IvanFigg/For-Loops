@@ -7,9 +7,7 @@ export function getFirstTenNumbers() {
   // Your code goes here...
 var numArray = [];
   for (var i = 1; i < 11; i++) {
-    if (numArray.length < 11) {
-      numArray.push(i);
-    }
+    numArray.push(i);
   }
   return numArray;
 }

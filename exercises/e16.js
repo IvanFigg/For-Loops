@@ -7,15 +7,12 @@
 
 export function flatArrays(flatArraysData) {
   const aArray = [];
-  const bArray = [];
-  const cArray = [];
   for (let i = 0; i < flatArraysData.length; i++) {
-    aArray.push(flatArraysData[i]);
     for (let x = 0; x < flatArraysData[i].length; x++) {
-      bArray.push(aArray[i][x]);
+      aArray.push(flatArraysData[i][x]);
     }  
   }
-  return bArray;
+  return aArray;
 }
 
 

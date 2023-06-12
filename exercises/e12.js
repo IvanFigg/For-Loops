@@ -10,10 +10,10 @@ export function getAllDepositsGreaterThanOneHundred(array) {
   for (let i = 0; i < array.length; i++) {
     if (array[i].deposits) {
     let sum = 0;
-    for (let j = 0; j < array[i].deposits.length; j++) {
-      sum += array[i].deposits[j];
-        if (array[i].deposits[j] > 100) {
-        array1.push(array[i].deposits[j]);
+    for (let deposit of array[i].deposits) {
+      sum += deposit;
+        if (deposit > 100) {
+        array1.push(deposit);
         } 
       } 
     } 

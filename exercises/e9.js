@@ -9,9 +9,8 @@ export function getClientsWithBalanceOverOneHundred(array) {
   const overBalance = [];
   
   for (let i = 0; i < array.length; i++) {
-    let profile = array[i];
-    if (profile.balance > 100) {
-      overBalance.push(profile);
+    if (array[i].balance > 100) {
+      overBalance.push(array[i]);
     }
   } return overBalance;
 }
